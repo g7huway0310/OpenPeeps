@@ -59,8 +59,6 @@ class ShowDetailViewController: UIViewController {
            formatter.timeStyle = .none
         
            BirthDateTxt.text=formatter.string(from: dataPicker.date)
-        
-        
            self.view.endEditing(true)
   }
 }

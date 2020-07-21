@@ -59,6 +59,7 @@ class ViewController: UIViewController {
                          })
             
         }
+        //動畫移動
         UIView.animate(withDuration: 1.5, animations: {
             self.leftimage.frame.origin.x += 25
             self.leftimage.alpha=0
@@ -73,10 +74,10 @@ class ViewController: UIViewController {
         
     }
     
+    //延遲執行
     func run(after seconds:Int, completion: @escaping() -> Void) {
         
         let deadline=DispatchTime.now() + .seconds(seconds)
-        
         DispatchQueue.main.asyncAfter(deadline: deadline) {
         completion()
         }
